@@ -6,10 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="a38de144-24e0-45e8-b9ad-121ab8446661" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigations/AccountStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigations/AccountStack.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/navigations/Navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigations/Navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/acount/Registerform.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/acount/Registerform.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/Account.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/account/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/account/Account.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/account/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/account/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/account/UserLogged.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/account/UserLogged.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/actions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -91,5 +95,23 @@
       <updated>1621958698558</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="388" y="120" key="#Servers" timestamp="1622632065569">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="388" y="120" key="#Servers/0.0.1360.768@0.0.1360.768" timestamp="1622632065569" />
+    <state x="268" y="78" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1622591382154">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="268" y="78" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.768@0.0.1360.768" timestamp="1622591382154" />
+    <state x="802" y="269" width="454" height="365" key="AVDManager" timestamp="1622694712453">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="802" y="269" width="454" height="365" key="AVDManager/0.0.1360.768@0.0.1360.768" timestamp="1622694712453" />
+    <state x="444" y="29" width="916" height="710" key="SettingsEditor" timestamp="1622693639339">
+      <screen x="0" y="0" width="1360" height="768" />
+    </state>
+    <state x="444" y="29" width="916" height="710" key="SettingsEditor/0.0.1360.768@0.0.1360.768" timestamp="1622693639339" />
   </component>
 </project>
