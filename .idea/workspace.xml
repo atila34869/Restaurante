@@ -7,11 +7,10 @@
     <list default="true" id="a38de144-24e0-45e8-b9ad-121ab8446661" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/acount/Registerform.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/acount/Registerform.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/Modal.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Modal.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/navigations/RestaurantsStack.js" beforeDir="false" afterPath="$PROJECT_DIR$/navigations/RestaurantsStack.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/account/Account.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/account/Account.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/account/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/account/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/screens/account/UserLogged.js" beforeDir="false" afterPath="$PROJECT_DIR$/screens/account/UserLogged.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/screens/Restaurants.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/actions.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/actions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utils/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />

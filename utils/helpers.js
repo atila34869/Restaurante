@@ -2,6 +2,7 @@
 import * as MediaLibrary from 'expo-media-library'
 import * as ImagePicker from 'expo-image-picker'
 import { Alert } from 'react-native'
+import * as Location from 'expo-location'
 
 export function validateEmail(email) {
     const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -31,4 +32,28 @@ export const fileToBlob = async(path) =>{
     const file = await fetch(path)
     const blob = await file.blob()
     return blob
+}
+
+export const getCurrentLocation = async() =>{
+    const response ={status:false, location:null}
+//    const resultPermissions = await Permissions.askAsync(Permissions.LOCATION)
+    const  resultPermissions = await Location.requestForegroundPermissionsAsync()
+    if(resultPermissions.status==="denied"){
+        Alert.alert("Debes dar permiso para localizacion")
+        return response
+    }
+    const position = Location.getCurrentPositionAsync({})
+    const location = {
+        latitude: (await position).coords.latitude,
+        longitude: (await position).coords.longitude,
+        latitudeDelta: 0.001,
+        longitudeDelta: 0.001,
+    }
+    response.status = true
+    response.location = location
+    return response
+}
+
+export const formatPhone = (callingcode, phone) => {
+    return `+(${ callingcode }) ${phone.substr(0,3)} ${phone.substr(3,3)} ${phone.substr(6,4)}`
 }

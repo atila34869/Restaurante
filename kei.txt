@@ -1,0 +1,7 @@
+AIzaSyCBM33krMaIvQ_NQWScMKXMOTIChDfd5WI
+
+Accessing credentials for atila34869 in project restaurants
+Google Certificate Fingerprint:     29:EA:0A:5A:8D:38:17:59:D4:F5:07:C7:BF:AF:02:BD:E0:36:CA:09
+Google Certificate Hash (SHA-1):    29EA0A5A8D381759D4F507C7BFAF02BDE036CA09
+Google Certificate Hash (SHA-256):  A77A45B1F4A6161177509D688972BD4413D70004AFA4983B4E9E69E3C701799B
+Facebook Key Hash:                  KeoKWo04F1nU9QfHv68CveA2ygk=

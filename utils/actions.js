@@ -111,3 +111,80 @@ export const updatePassword = async(password) => {
   } 
   return  result
 }
+
+export const addDocumentwithoutId = async(collection,data) => {
+  const result ={statusResponse:true, error:null}
+  try {
+    // agregamos un documento a nuestra coleccion en nuestro caso es la coleccion de restaurants
+    await db.collection(collection).add(data)
+  } catch (error) {
+    result.statusResponse = false
+    result.error = error
+  } 
+  return  result
+}
+
+export const getRestaurants = async(limite) => {
+  const result ={statusResponse:true, error:null, restaurants:[], startRestaurant:null}
+  try {
+    // coleccion de restaurantes limitados 
+    const response = await db
+    .collection("restaurants")
+    .orderBy("createAt", "desc")
+    .limit(limite)
+    .get()
+    if (response.docs.length > 0){
+      result.startRestaurant = response.docs[response.docs.length - 1]
+    }
+    response.docs.forEach( (doc) => {
+        const restaurant = doc.data()
+        restaurant.id = doc.id
+        result.restaurants.push(restaurant)
+      })  
+    }catch (error) {
+    result.statusResponse = false
+    result.error = error
+  } 
+  return  result
+}
+
+export const getMoreRestaurants = async(limite, startRestaurants) => {
+  const result ={statusResponse:true, error:null, restaurants:[], startRestaurant:null}
+  try {
+    // coleccion de restaurantes limitados 
+    const response = await db
+    .collection("restaurants")
+    .orderBy("createAt", "desc")
+    .startAfter(startRestaurants.data().createAt)
+    .limit(limite)
+    .get()
+    if (response.docs.length > 0){
+      result.startRestaurant = response.docs[response.docs.length - 1]
+    }
+    response.docs.forEach( (doc) => {
+        const restaurant = doc.data()
+        restaurant.id = doc.id
+        result.restaurants.push(restaurant)
+      })  
+    }catch (error) {
+    result.statusResponse = false
+    result.error = error
+  } 
+  return  result
+}
+// me trae todos los restaurant como lista
+/*export const traerRestaurants = async() => {
+  const result ={statusResponse:true, error:null, restaurants:[]}
+  try {
+    const response = await db.collection("restaurants").orderBy("createAt", "desc").get()
+    response.docs.forEach( (doc)=>{
+      const restaurant = doc.data()
+      restaurant.id = doc.id
+      result.restaurants.push(restaurant)
+    })
+  } catch (error) {
+    result.statusResponse = false
+    result.error = error
+  } 
+  return  result
+}*/

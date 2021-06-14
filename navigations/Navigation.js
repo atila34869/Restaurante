@@ -44,7 +44,7 @@ export default function Navigation() {
     }
 
     return (
-        <NavigationContainer>
+        <NavigationContainer >
             <Tab.Navigator
                 initialRouteName="restaurants"
                 tabBarOptions ={{
