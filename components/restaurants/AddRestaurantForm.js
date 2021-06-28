@@ -165,7 +165,7 @@ function MapRestaurant({ isVisibleMap, setIsVisibleMap, setLocationRestaurant, t
                 setNewRegion(response.location)
             }
         })()
-        
+         
     }, [])
     
     const confirmLocation = () => {

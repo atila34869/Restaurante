@@ -9,6 +9,19 @@ import SearchStack from './SearchStack'
 import AccountStack from './AccountStack'
 
 import { Icon } from 'react-native-elements/dist/icons/Icon'
+import { DarkTheme, DefaultTheme } from '@react-navigation/native'
+
+const MyTheme = {
+    dark: false,
+    colors: {
+      primary: "#f3bfa9",
+      background: "#eef0e3", //color de fondo
+      card: "#c8ced4", //color de la tarjeta tap
+      text: "#134a63", 
+      border: "#134a63",
+      notification: "#134a63",
+    },
+  }
 
 const Tab = createBottomTabNavigator()
 
@@ -44,11 +57,12 @@ export default function Navigation() {
     }
 
     return (
-        <NavigationContainer >
+        <NavigationContainer>
             <Tab.Navigator
                 initialRouteName="restaurants"
+                barStyle={{ backgroundColor: "#f3bfa9" }}
                 tabBarOptions ={{
-                    inactiveTintColor:"#6c9cac",
+                    inactiveTintColor:"#134a63",
                     activeTintColor:"#e96f55"
                 }}
                 screenOptions ={({route})=>({

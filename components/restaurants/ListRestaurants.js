@@ -15,23 +15,26 @@ export default function ListRestaurants({restaurants, navigation, handleLoadMore
                 onEndReachedThreshold={0.5}
                 onEndReached={handleLoadMore}
                 renderItem={ (restaurant) => 
-                    <Restaurant restaurant={restaurant} navigation={navigation}/>
-                
+                    <Restaurante restaurant={restaurant} navigation={navigation}/>
             }
-                
             />
         </View>
     )
 }
 
-function Restaurant ({restaurant, navigation, handleLoadMore}) {
+function Restaurante ({restaurant, navigation, handleLoadMore}) {
     
-    const {id, images, name, address, description, phone } = restaurant.item
+    const {id, images, name, address, description } = restaurant.item
+    const phone = restaurant.item.phone
     const callingCode = restaurant.item.callingCode
     const imageRestaurant = images[0]
     
+    const goRestaurant = () => {
+        navigation.navigate("restaurant", {id, name})
+    }
+
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={goRestaurant}>
             <View style={styles.viewRestaurant}>
                 <View style={styles.viewRestaurantImage}>
                     <Image
@@ -67,8 +70,8 @@ const styles = StyleSheet.create({
          marginRight:15,
      },
      imageRestaurant:{
-         width: 90,
-         height:90
+         width: 140,
+         height:140
      },
      restaurantTitle:{
          fontWeight: "bold"

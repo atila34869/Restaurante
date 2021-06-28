@@ -16,6 +16,7 @@ export const loadImageFromGallery = async(array)=>{
 //    const resultPermissions= await ImagePicker.requestMediaLibraryPermissionsAsync()
     if (resultPermissions.status ==="denied"){
         Alert.alert("debes de darle permiso para acceder a las imagenes de la camara")
+        return response
     }
     const result = await ImagePicker.launchImageLibraryAsync({
         allowsEditing: true,
@@ -55,5 +56,5 @@ export const getCurrentLocation = async() =>{
 }
 
 export const formatPhone = (callingcode, phone) => {
-    return `+(${ callingcode }) ${phone.substr(0,3)} ${phone.substr(3,3)} ${phone.substr(6,4)}`
+    return `+(${ callingcode }) ${phone.substring(0,3)} ${phone.substring(3,6)} ${phone.substring(6,10)}`
 }

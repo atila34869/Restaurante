@@ -6,7 +6,7 @@ import firebase from 'firebase/app'
 import { size } from 'lodash'
 
 import Loading from '../../components/Loading'
-import {getMoreRestaurants, getRestaurants, traerRestaurants } from '../../utils/actions'
+import {getMoreRestaurants, getRestaurants } from '../../utils/actions'
 import ListRestaurants from '../../components/restaurants/ListRestaurants'
 
 export default function Restaurants({navigation}) {
@@ -24,11 +24,9 @@ export default function Restaurants({navigation}) {
         })
     }, [])
 
-    
-    useFocusEffect(
+   useFocusEffect(
             useCallback(() => {
-                
-                const fetchData= async() =>{
+                const fetchData = async() =>{
                     setLoading(true)
                     const response = await getRestaurants(limitRestaurants)
                     //const response = await traerRestaurants()
@@ -45,19 +43,16 @@ export default function Restaurants({navigation}) {
         if(!startRestaurant){
             return
         }
-        setLoading(true)
         const response = await getMoreRestaurants(limitRestaurants, startRestaurant)
         if (response.statusResponse){
             setStartRestaurant(response.startRestaurant)
             setRestaurants([...restaurants, ...response.restaurants])
         }
-        setLoading(false)
     }
 
     if (user === null){
         return <Loading
         isVisible={true}
-        text = "Cargando..."
         />
     }
 

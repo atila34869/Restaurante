@@ -172,19 +172,19 @@ export const getMoreRestaurants = async(limite, startRestaurants) => {
   } 
   return  result
 }
-// me trae todos los restaurant como lista
-/*export const traerRestaurants = async() => {
-  const result ={statusResponse:true, error:null, restaurants:[]}
+
+export const getDocumentById = async(collection, id) => {
+  const result ={statusResponse:true, error:null, document:null}
   try {
-    const response = await db.collection("restaurants").orderBy("createAt", "desc").get()
-    response.docs.forEach( (doc)=>{
-      const restaurant = doc.data()
-      restaurant.id = doc.id
-      result.restaurants.push(restaurant)
-    })
+    const response = await db
+      .collection(collection)
+      .doc(id)
+      .get()
+    result.document = response.data()
+    result.document.id = response.id
   } catch (error) {
     result.statusResponse = false
     result.error = error
   } 
-  return  result
-}*/
+  return result
+}
